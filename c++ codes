@@ -2,3 +2,4 @@
 #include <cstdlib> 
 #include <ctime>
 #include <limits> // Required for numeric_limits
+int main() {

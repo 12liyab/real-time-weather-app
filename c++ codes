@@ -28,3 +28,5 @@ std::cout << "Too high!\n";
 } else if (guess < secretNumber) {
 std::cout << "Too low!\n";
 } else {
+std::cout << "\nCongratulations! You guessed the number in " << attempts << " attempts!\n";
+            guessedCorrectly = true;

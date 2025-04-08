@@ -8,3 +8,4 @@ std::srand(static_cast<unsigned int>(std::time(nullptr)));
  // Generate a random secret number between 1 and 100 (inclusive)
 int secretNumber = std::rand() % 100 + 1;
 int guess;
+int attempts = 0;

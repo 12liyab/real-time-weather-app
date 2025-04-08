@@ -30,3 +30,11 @@ std::cout << "Too low!\n";
 } else {
 std::cout << "\nCongratulations! You guessed the number in " << attempts << " attempts!\n";
 guessedCorrectly = true;
+  }
+
+    } while (!guessedCorrectly);
+
+    std::cout << "Thank you for playing!\n";
+
+    return 0;
+}

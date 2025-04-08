@@ -27,3 +27,4 @@ if (guess > secretNumber) {
 std::cout << "Too high!\n";
 } else if (guess < secretNumber) {
 std::cout << "Too low!\n";
+} else {

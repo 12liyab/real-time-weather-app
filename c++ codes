@@ -20,3 +20,4 @@ attempts++;
 if (std::cin.fail()) {
 std::cout << "Invalid input. Please enter a number.\n";
  std::cin.clear(); // Clear the error flags
+std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input

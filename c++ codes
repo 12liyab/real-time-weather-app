@@ -23,3 +23,4 @@ std::cout << "Invalid input. Please enter a number.\n";
 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
 continue; // Go back to the beginning of the loop
  }
+if (guess > secretNumber) {

@@ -18,3 +18,4 @@ std::cin >> guess;
 attempts++;
 // Input validation to handle non-numeric input
 if (std::cin.fail()) {
+std::cout << "Invalid input. Please enter a number.\n";

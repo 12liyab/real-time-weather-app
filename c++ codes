@@ -29,4 +29,4 @@ std::cout << "Too high!\n";
 std::cout << "Too low!\n";
 } else {
 std::cout << "\nCongratulations! You guessed the number in " << attempts << " attempts!\n";
-            guessedCorrectly = true;
+guessedCorrectly = true;

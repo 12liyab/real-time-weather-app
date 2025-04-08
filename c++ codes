@@ -24,3 +24,4 @@ std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard i
 continue; // Go back to the beginning of the loop
  }
 if (guess > secretNumber) {
+std::cout << "Too high!\n";

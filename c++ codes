@@ -10,3 +10,4 @@ int secretNumber = std::rand() % 100 + 1;
 int guess;
 int attempts = 0;
  bool guessedCorrectly = false;
+std::cout << "Welcome to the Guessing Game!\n";

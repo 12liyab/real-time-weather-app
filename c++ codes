@@ -11,3 +11,4 @@ int guess;
 int attempts = 0;
  bool guessedCorrectly = false;
 std::cout << "Welcome to the Guessing Game!\n";
+std::cout << "I'm thinking of a number between 1 and 100.\n";

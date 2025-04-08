@@ -14,3 +14,4 @@ std::cout << "Welcome to the Guessing Game!\n";
 std::cout << "I'm thinking of a number between 1 and 100.\n";
 do { 
 std::cout << "Enter your guess: ";
+std::cin >> guess;

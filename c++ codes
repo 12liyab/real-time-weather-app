@@ -16,3 +16,4 @@ do {
 std::cout << "Enter your guess: ";
 std::cin >> guess;
 attempts++;
+// Input validation to handle non-numeric input

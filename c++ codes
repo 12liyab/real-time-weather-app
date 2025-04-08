@@ -25,3 +25,4 @@ continue; // Go back to the beginning of the loop
  }
 if (guess > secretNumber) {
 std::cout << "Too high!\n";
+} else if (guess < secretNumber) {

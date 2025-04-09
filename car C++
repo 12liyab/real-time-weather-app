@@ -16,3 +16,4 @@ public:
 std::string tireType;
 int diameter;
 Wheel(std::string tt, int d) : tireType(tt), diameter(d) {}
+};

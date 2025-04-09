@@ -7,3 +7,4 @@ public:
 std::string type;
 int horsepower;
  Engine(std::string t, int hp) : type(t), horsepower(hp) {}
+void start() {

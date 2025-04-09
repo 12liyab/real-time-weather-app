@@ -34,3 +34,4 @@ Car(std::string m, Engine e, std::vector<Wheel> w, Body b)
 void drive() {
 std::cout << "The " << body.color << " " << model << " is driving.\n";
 engine.start();
+}

@@ -30,3 +30,4 @@ Engine engine;
 std::vector<Wheel> wheels;
 Body body;
 Car(std::string m, Engine e, std::vector<Wheel> w, Body b)
+ : model(m), engine(e), wheels(w), body(b) {}

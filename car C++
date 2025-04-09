@@ -26,3 +26,4 @@ Body(std::string s, std::string c) : style(s), color(c) {}
 class Car {
 public:
 std::string model;
+Engine engine;

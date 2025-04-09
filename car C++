@@ -24,3 +24,4 @@ std::string color;
 Body(std::string s, std::string c) : style(s), color(c) {}
 };
 class Car {
+public:

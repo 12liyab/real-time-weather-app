@@ -28,3 +28,4 @@ public:
 std::string model;
 Engine engine;
 std::vector<Wheel> wheels;
+Body body;

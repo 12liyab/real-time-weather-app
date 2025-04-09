@@ -10,3 +10,4 @@ int horsepower;
 void start() {
 std::cout << "Engine (" << type << ") started. Vroom vroom!\n";
   }
+};

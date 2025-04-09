@@ -36,3 +36,4 @@ std::cout << "The " << body.color << " " << model << " is driving.\n";
 engine.start();
 }
 void displayDetails() const {
+std::cout << "\nCar Details:\n";

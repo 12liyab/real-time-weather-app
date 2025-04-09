@@ -19,3 +19,4 @@ Wheel(std::string tt, int d) : tireType(tt), diameter(d) {}
 };
 class Body {
 public:
+std::string style;

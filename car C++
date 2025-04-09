@@ -37,3 +37,51 @@ engine.start();
 }
 void displayDetails() const {
 std::cout << "\nCar Details:\n";
+std::cout << "Model: " << model << "\n";
+        std::cout << "Body Style: " << body.style << ", Color: " << body.color << "\n";
+        std::cout << "Engine Type: " << engine.type << ", Horsepower: " << engine.horsepower << "\n";
+        std::cout << "Wheels:\n";
+        for (const auto& wheel : wheels) {
+            std::cout << "- Type: " << wheel.tireType << ", Diameter: " << wheel.diameter << " inches\n";
+        }
+    }
+};
+
+int main() {
+    // Create an engine
+    Engine myEngine("Gasoline", 200);
+
+    // Create wheels
+    std::vector<Wheel> myWheels;
+    for (int i = 0; i < 4; ++i) {
+        myWheels.emplace_back("All-Season", 17);
+    }
+
+    // Create a car body
+    Body myBody("Sedan", "Silver");
+
+    // Build the car
+    Car myCar("Generic Sedan", myEngine, myWheels, myBody);
+
+    // Interact with the car
+    myCar.displayDetails();
+    myCar.drive();
+
+    std::cout << "\nLet's build another car!\n";
+
+    // Create components for a sports car
+    Engine sportsEngine("V6", 350);
+    std::vector<Wheel> sportsWheels;
+    for (int i = 0; i < 4; ++i) {
+        sportsWheels.emplace_back("Performance", 19);
+    }
+    Body sportsBody("Coupe", "Red");
+
+    // Build the sports car
+    Car sportsCar("Speedster X", sportsEngine, sportsWheels, sportsBody);
+
+    sportsCar.displayDetails();
+    sportsCar.drive();
+
+    return 0;
+}

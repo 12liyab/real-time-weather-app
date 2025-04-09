@@ -12,3 +12,4 @@ std::cout << "Engine (" << type << ") started. Vroom vroom!\n";
   }
 };
 class Wheel {
+public:

@@ -1,40 +1,55 @@
 #include <iostream>
-#include <cstdlib> 
+#include <cstdlib>
 #include <ctime>
 #include <limits> // Required for numeric_limits
+
 int main() {
- // Seed the random number generator
-std::srand(static_cast<unsigned int>(std::time(nullptr)));
- // Generate a random secret number between 1 and 100 (inclusive)
-int secretNumber = std::rand() % 100 + 1;
-int guess;
-int attempts = 0;
- bool guessedCorrectly = false;
-std::cout << "Welcome to the Guessing Game!\n";
-std::cout << "I'm thinking of a number between 1 and 100.\n";
-do { 
-std::cout << "Enter your guess: ";
-std::cin >> guess;
-attempts++;
-// Input validation to handle non-numeric input
-if (std::cin.fail()) {
-std::cout << "Invalid input. Please enter a number.\n";
- std::cin.clear(); // Clear the error flags
-std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
-continue; // Go back to the beginning of the loop
- }
-if (guess > secretNumber) {
-std::cout << "Too high!\n";
-} else if (guess < secretNumber) {
-std::cout << "Too low!\n";
-} else {
-std::cout << "\nCongratulations! You guessed the number in " << attempts << " attempts!\n";
-guessedCorrectly = true;
-  }
+    // Seed the random number generator
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
-    } while (!guessedCorrectly);
+    // Generate a random secret number between 1 and 100 (inclusive)
+    int secretNumber = std::rand() % 100 + 1;
+    int guess;
+    int attempts = 0;
+    bool guessedCorrectly = false;
+    char playAgain;
 
-    std::cout << "Thank you for playing!\n";
+    std::cout << "Welcome to the Guessing Game!\n";
+
+    do {
+        std::cout << "\nI'm thinking of a number between 1 and 100.\n";
+        attempts = 0;
+        guessedCorrectly = false;
+
+        do {
+            std::cout << "Enter your guess: ";
+            std::cin >> guess;
+            attempts++;
+
+            // Input validation to handle non-numeric input
+            if (std::cin.fail()) {
+                std::cout << "Invalid input. Please enter a number.\n";
+                std::cin.clear(); // Clear the error flags
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+                continue; // Go back to the beginning of the loop
+            }
+
+            if (guess > secretNumber) {
+                std::cout << "Too high!\n";
+            } else if (guess < secretNumber) {
+                std::cout << "Too low!\n";
+            } else {
+                std::cout << "\nCongratulations! You guessed the number in " << attempts << " attempts!\n";
+                guessedCorrectly = true;
+            }
+
+        } while (!guessedCorrectly);
+
+        std::cout << "Do you want to play again? (y/n): ";
+        std::cin >> playAgain;
+    } while (playAgain == 'y' || playAgain == 'Y');
+
+    std::cout << "\nThank you for playing!\n";
 
     return 0;
 }
